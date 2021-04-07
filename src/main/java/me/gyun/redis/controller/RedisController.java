@@ -16,7 +16,13 @@ public class RedisController {
 
     @GetMapping("/")
     public String test() {
-        redisService.redisService();
+        redisService.redisString();
+        return "test";
+    }
+
+    @GetMapping("/redis")
+    public String redis() {
+        redisService.redisObject();
         return "test";
     }
 }
