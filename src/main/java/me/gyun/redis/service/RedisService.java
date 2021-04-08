@@ -23,12 +23,4 @@ public class RedisService {
         String redis = (String)operations.get("star");
         log.info(redis);
     }
-
-    public void redisObject() {
-        ValueOperations<String, Object> operations = redisTemplate.opsForValue();
-        DataDto dataDto = new DataDto();
-        dataDto.setId(1L);
-        dataDto.setName("Gyunny");
-        operations.set("object", dataDto);
-    }
 }
